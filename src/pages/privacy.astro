@@ -1,0 +1,80 @@
+---
+import Icon from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+
+const copyrightYear = new Date().getFullYear();
+---
+
+<Layout title="Privacy">
+  <section class="px-8 py-24 bg-gray-100">
+    <div class="max-w-[720px] mx-auto w-full">
+      <a href="/" class="text-accent mb-4 flex">Back</a>
+      <h1 class="text-6xl font-bold">Privacy Policy</h1>
+    </div>
+  </section>
+
+  <section class="px-8 py-24">
+    <div class="max-w-[720px] mx-auto">
+      <h2 class="text-4xl font-bold mb-4">No Collection of Data</h2>
+      <p class="text-xl">
+        Being sensitive to user data and privacy, we do not store any
+        information outside of the user’s device. When you download Type1, you
+        provide your age and sex which stays with you as long as application
+        stays on your device. Your age and sex are needed to determine your
+        estimated insulin sensitivity. No health related data such as insulin
+        consumption values or blood glucose levels are stored outside of the
+        application. No pictures taken from the camera or personalized meals are
+        collected. Users have an option to save their data on icloud upon
+        deletion of the application.
+      </p>
+      <p class="text-xl mt-8">
+        We value your privacy which is the reason we don’t ask you to create an
+        account with Type1. Not worrying about your data should be a right and
+        not a privilege. Which is why you can stay off-grid without having to
+        enter any personal information. Even your name. You can backup and
+        restore your data from icloud if you change your device. Your data stays
+        with you.
+      </p>
+
+      <h2 class="text-4xl font-bold mt-16 mb-4">Terms of Use</h2>
+      <ul class="text-xl space-y-3 list-disc list-inside">
+        <li>
+          We do not endorse the use of hormones such as insulin, we simply help
+          people map their own insulin doses to a picture of their food.
+        </li>
+        <li>
+          We are not liable for the user intake of insulin, the values are based
+          on personal approximation and estimation.
+        </li>
+        <li>We do not calculate insulin doses for the user.</li>
+      </ul>
+
+      <h2 class="text-4xl font-bold mt-16 mb-4">
+        Health and nutritional information
+      </h2>
+      <p class="text-xl">
+        You are responsible for your own health. Type1 is not a medical
+        organization, and we will not provide you with any medical advice or
+        diagnosis. The purpose of the Services is solely to help our users
+        manage their diabetes more efficiently and easily by mapping insulin
+        doses to food pictures. We cannot guarantee any health, weight and/or
+        fitness results or improvements. Our Services are only intended for
+        people who depend on insulin, and please do not use our application if
+        you suffer from, or might suffer from, any medical condition that may be
+        impaired by the use of insulin. We are not responsible for any personal
+        injury or any other damages that may have been the result, direct or
+        indirect, of any use or misuse of our app.
+      </p>
+    </div>
+  </section>
+  <footer class="bg-white px-8 py-4 border border-t border-black/5">
+    <div class="max-w-screen-xl mx-auto flex items-center justify-between">
+      <p>© Type1 {copyrightYear}</p>
+
+      <div class="flex gap-8 items-center">
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+</Layout>

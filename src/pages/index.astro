@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+import HeroTeaser from "../assets/teaser.mp4";
+import { Image } from "@astrojs/image/components";
+
+const copyrightYear = new Date().getFullYear();
+
+const FeatureImage1 =
+  "https://imagedelivery.net/VyfuvVlSbLIpk_hnmnQjRg/e0bb126e-2176-4a17-8b20-99bec5d85f00/public";
+
+const FeatureImage2 =
+  "https://imagedelivery.net/VyfuvVlSbLIpk_hnmnQjRg/57188cdc-2a5a-4e6b-9cf9-e14fbec80d00/public";
+
+const FeatureImage3 =
+  "https://imagedelivery.net/VyfuvVlSbLIpk_hnmnQjRg/87bd739b-797c-42bd-b1e8-0f4d44026500/public";
+
+const FeatureImage4 =
+  "https://imagedelivery.net/VyfuvVlSbLIpk_hnmnQjRg/522e8052-68c4-4140-a91c-35f8a9c1ba00/public";
+---
+
+<Layout title="Type 1">
+  <main>
+    <section class="px-8 py-32">
+      <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-20 items-center">
+        <div class="flex flex-col gap-10">
+          <Icon name="logo" width={32} />
+          <div class="flex flex-col gap-5">
+            <h1 class="text-7xl font-bold leading-none">
+              Diabetes made simple.
+            </h1>
+            <p class="text-3xl max-w-[40ch] leading-[1.4]">
+              Track insulin doses with a snapshot.
+            </p>
+          </div>
+          <a href="https://apps.apple.com/ye/app/type1/id1543368559">
+            <Icon name="app-store" width={128} />
+          </a>
+        </div>
+
+        <div class="w-full h-[80vh]">
+          <video
+            autoplay
+            muted
+            loop
+            class="w-full h-full object-contain bg-white"
+          >
+            <source src={HeroTeaser} />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-32 bg-[#f9f9f9]">
+      <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-20 items-center">
+        <div class="flex flex-col gap-8">
+          <h2 class="text-6xl font-bold leading-none tracking-tight">
+            Your food is <span class="text-accent">personal</span>
+          </h2>
+          <p class="text-2xl max-w-[40ch] leading-[1.4]">
+            Help Type1 recognize the food you eat. After labeling your food for
+            the first time, Type1 will identify the meal and remind you with
+            your insulin dose the next time you click a picture of it.
+          </p>
+        </div>
+
+        <img src={FeatureImage1} width={"100%"} alt={"Type 1 Feature"} />
+      </div>
+    </section>
+
+    <section class="px-8 py-32">
+      <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-20 items-center">
+        <img src={FeatureImage2} width={"100%"} alt={"Type 1 Feature"} />
+        <div class="flex flex-col gap-8">
+          <h2 class="text-6xl font-bold leading-none tracking-tight">
+            <span class="text-accent"> Stop calculating.</span>
+            <br /> Start eating.
+          </h2>
+          <p class="text-2xl max-w-[40ch] leading-[1.4]">
+            No carbs. No calories. Just a picture of your food to remember how
+            much insulin you need. Type1 will show you an insulin dose based on
+            your given values.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-32 bg-[#f9f9f9]">
+      <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-20 items-center">
+        <div class="flex flex-col gap-8">
+          <h2 class="text-6xl font-bold leading-none tracking-tight">
+            <span class="text-accent">Keep an eye</span> on <br /> your health
+          </h2>
+          <p class="text-2xl max-w-[36ch] leading-[1.4]">
+            Look back at your blood sugar levels and your eating habits.
+          </p>
+        </div>
+
+        <img src={FeatureImage3} width={"100%"} alt={"Type 1 Feature"} />
+      </div>
+    </section>
+
+    <section class="px-8 py-32">
+      <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-20 items-center">
+        <img src={FeatureImage4} width={"100%"} alt={"Type 1 Feature"} />
+        <div class="flex flex-col gap-8">
+          <h2 class="text-6xl font-bold leading-none tracking-tight">
+            <span class="text-accent">Your data</span> stays <br /> with you.
+          </h2>
+          <p class="text-2xl max-w-[32ch] leading-[1.4]">
+            Without the need for an account, your health data stays on the app.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-24 bg-[#f9f9f9]">
+      <div
+        class="max-w-[1080px] mx-auto flex flex-col items-center justify-center gap-8 text-center"
+      >
+        <h3 class="text-5xl font-bold">Start Using Type1</h3>
+        <a href="https://apps.apple.com/ye/app/type1/id1543368559">
+          <Icon name="app-store" width={128} />
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-white px-8 py-4">
+      <div class="max-w-[1080px] mx-auto flex items-center justify-between">
+        <p>© Type1 {copyrightYear}</p>
+
+        <div class="flex gap-8 items-center">
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
+
+<style></style>
